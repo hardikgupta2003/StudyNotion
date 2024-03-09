@@ -4,7 +4,7 @@ import {toast} from "react-hot-toast"
 const initialState= {
     cart: localStorage.getItem("cart") ?  JSON.parse(localStorage.getItem("cart")) : [],
     total: localStorage.getItem("total") ? JSON.parse(localStorage.getItem("total")) : 0,
-    totalItems: localStorage.getItems("totalItems") ?  JSON.parse(localStorage.getItem("totalItems")) : 0,
+    totalItems: localStorage.getItem("totalItems") ?  JSON.parse(localStorage.getItem("totalItems")) : 0,
 }
 
 
@@ -13,7 +13,7 @@ const cartSlice = createSlice({
     initialState:initialState,
 
     reducers:{
-        addToCart(state,value){
+        addToCart(state,action){
             const course = action.payload;
             const index = state.cart.findIndex((item)=> item._id === course._id)
 
@@ -38,7 +38,7 @@ const cartSlice = createSlice({
             toast.success(" Course added to the cart")
 
         },
-        removeFromCart(state,value){
+        removeFromCart(state,action){
             const course = action.payload;
             const index = state.cart.findIndex((item)=> item._id === course._id)
 
