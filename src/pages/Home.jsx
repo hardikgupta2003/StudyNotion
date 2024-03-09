@@ -9,6 +9,8 @@ import TimeLineSection from '../components/core/HomePage/TimeLineSection'
 import LearningLanguage from '../components/core/HomePage/LearningLanguage'
 import InstructorSection from '../components/core/HomePage/InstructorSection'
 import ReviewSlider from '../components/core/HomePage/ReviewSlider'
+import ExploreMore from '../components/core/HomePage/ExploreMore'
+import Footer from '../components/common/Footer'
 
 const Home = () => {
   return (
@@ -133,7 +135,7 @@ const Home = () => {
                 codeColor={"text-yellow-25"}
                 />
             </div>
-
+                <ExploreMore/>
 
     </div>
 
@@ -192,12 +194,13 @@ const Home = () => {
 
         <h2 className='text-center text-4xl  font-semibold mt-10'>Reviews from Other Learners</h2>
 
-        <ReviewSlider />
+       
     </div>
 
 
 
     {/* Footer  */}
+    <Footer/>
     
 
 

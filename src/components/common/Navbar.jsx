@@ -11,7 +11,6 @@ import { categories } from '../../services/apis'
 import { useState } from 'react'
 import {IoIosArrowDropdownCircle} from "react-icons/io"
 
-
 const subLinks = [
     {
         title:"python",
@@ -114,7 +113,7 @@ const Navbar = () => {
                 {/* login signup dashboard  */}
                 <div className="flex gap-x-4 items-center">
                     {
-                        user && user?.accountType != "Instructor" && (
+                        user && user?.accountType !== "Instructor" && (
                             <Link to="/dashboard/cart" className='relative'>
                                 <AiOutlineShoppingCart />
                                 {
@@ -146,7 +145,8 @@ const Navbar = () => {
                         )
                     }
                     {
-                        token !== null && <ProfileDropDown />
+                        token !== null && 
+                        <ProfileDropDown/>
                     }
 
                 </div>
