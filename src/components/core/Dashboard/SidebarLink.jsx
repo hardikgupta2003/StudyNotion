@@ -6,7 +6,7 @@ import * as Icons from"react-icons/vsc"
 import {resetCourseState} from "../../../slices/courseSlice"
 
 
-export const SidebarLink = ({link,iconName}) => {
+export default function SidebarLink ({link,iconName}) {
     const Icon = Icons[iconName];
     const location = useLocation();
     const dispatch = useDispatch();
